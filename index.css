@@ -1,0 +1,22 @@
+body {
+    background-color: #7851A9;  
+    font-family: system-ui;
+}
+
+h1 {
+    color: #FFD700; 
+    text-align: center;
+    font-style: italic;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    max-height: 150px;
+}
