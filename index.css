@@ -7,6 +7,7 @@ h1 {
     color: #FFD700; 
     text-align: center;
     font-style: italic;
+    font-family: Papyrus, sans-serif;
 }
 
 ul {
@@ -17,6 +18,10 @@ li {
     list-style-type: none;
 }
 
+p {
+    color: #FFD700; 
+}
+
 img {
-    max-height: 150px;
+    max-height: 300px;
 }

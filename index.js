@@ -1,62 +1,55 @@
 fetch("http://localhost:3000/artwork")
-    .then((response) => response.json)
-    .then((data) => renderArt(data))
+  .then((resp) => resp.json())
+  .then((data) => {
+    console.log(data);
+    renderArtArr(data);
+  });
 
-function renderArt(objStoringUrls) {
-    urlArr = objStoringUrls.message
-
-    const imgContainer = document.querySelector('#art-image-container')
-
-    urlArr.forEach((url) => {
-        const img = document.createElement('img')
-        img.src = url
-        imgContainer.appendChild(img)
-    })
-}
-
-
-fetch("https://dog.ceo/api/breeds/list/all")
-    .then((resp) => resp.json())
-    .then((data) => renderArtNames(data))
-
-function renderBreedNames(objStoringBreeds) {
-    breedObj = objStoringBreeds.message
-    breedArr = Object.keys(breedObj)
-
-    const breedContainer = document.querySelector('#dog-breeds')
-
-    breedArr.forEach((breed) => {
-        const li = document.createElement('li')
-        li.textContent = breed
-        breedContainer.appendChild(li)
-
-        li.addEventListener('click', () => li.style.color = 'salmon')
-    })
-
-    const dropdown = document.querySelector('#breed-dropdown')
-
-    dropdown.addEventListener('change', (e) => handleSelectBreed(e))
-
-    function handleSelectBreed(e) {
-
-        breedContainer.textContent = ""
-
-        const filteredBreeds = breedArr.filter((breed) => {
-            if (breed.charAt(0) === e.target.value) {
-                return true
-            }
-            else {
-                return false
-            }
-            // return breed[0] === e.target.value
-        })
-
-        filteredBreeds.forEach((breed) => {
-            const li = document.createElement('li')
-            li.textContent = breed
-            breedContainer.appendChild(li)
+function renderArtArr(artArr) {
     
-            li.addEventListener('click', () => li.style.color = 'salmon')
+    const ul = document.querySelector('#artwork')
+        
+    artArr.forEach((artObj) => 
+        {
+            console.log(artObj)
+            console.log(artObj.image)
+    
+            const li = document.createElement('li')
+    
+            const p = document.createElement('p')
+            p.textContent = artObj.name
+            li.appendChild(p)
+    
+            const img = document.createElement('img')
+            img.src = artObj.image
+            img.style.margin = '5px'
+            img.style.border = '15px groove gold'
+
+            li.appendChild(img)
+    
+            li.addEventListener('mouseover', handleHover)
+            li.addEventListener('mouseout', handleUnhover)
+    
+            function handleHover() {
+                li.style.border = 'solid 4px #90EE90'
+            }
+    
+            function handleUnhover() {
+                    li.style.border = 'none'
+            }
+    
+            ul.appendChild(li)
         })
-    }
+
+        const image = document.querySelector('.artwork-image');
+
+        image.addEventListener('click', function() {
+          const artist = data.artist; // Assuming `data` represents the object you provided
+          const year = data.year; // Assuming `data` represents the object you provided
+          const style = data.style; // Assuming `data` represents the object you provided
+        
+          console.log(`Artist: ${artist}, Year: ${year}, Style: ${style}`);
+        });
+     
 }
+    

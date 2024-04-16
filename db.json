@@ -10,7 +10,7 @@
       },
       {
         "id": 2,
-        "name": "Washingotn Crossing the Delaware",
+        "name": "Washington Crossing the Delaware",
         "artist": "Emanuel Leutze",
         "year": "1851",
         "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11417/42494/main-image",
@@ -45,7 +45,7 @@
         "name": "The Gulf Stream",
         "artist": "Winslow Homer",
         "year": "1899",
-        "image": "./assets/ramen/kojiro.jpg",
+        "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11122/2018691/main-image",
         "style": "Realism"
       }
     ]
