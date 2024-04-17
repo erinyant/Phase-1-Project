@@ -5,6 +5,11 @@ fetch("http://localhost:3000/artwork")
     renderArtArr(data);
   });
 
+// document.addEventListener("DOMContentLoaded", function() {
+// const element = document.querySelector("your-selector");
+//     // Rest of your code
+// })
+
 function renderArtArr(artArr) {
     
     const ul = document.querySelector('#artwork')
@@ -31,7 +36,7 @@ function renderArtArr(artArr) {
             li.addEventListener('mouseout', handleUnhover)
     
             function handleHover() {
-                li.style.border = 'solid 4px #90EE90'
+                li.style.border = 'solid 3px #90EE90'
             }
     
             function handleUnhover() {
@@ -41,12 +46,13 @@ function renderArtArr(artArr) {
             ul.appendChild(li)
         })
 
-        const image = document.querySelector('.artwork-image');
+        const image = document.getElementById('.artwork-image');
+        // grab p, where painting title stored
 
         image.addEventListener('click', function() {
-          const artist = data.artist; // Assuming `data` represents the object you provided
-          const year = data.year; // Assuming `data` represents the object you provided
-          const style = data.style; // Assuming `data` represents the object you provided
+          const artist = data.artist; 
+          const year = data.year;
+          const style = data.style; 
         
           console.log(`Artist: ${artist}, Year: ${year}, Style: ${style}`);
         });
