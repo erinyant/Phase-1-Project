@@ -23,6 +23,17 @@ function renderArtArr(artArr) {
     
             const p = document.createElement('p')
             p.textContent = artObj.name
+
+            p.id = artObj.id
+            p.addEventListener('click', e => {
+            const foundArt = artArr.find(art => art.id === e.target.id)
+            const pArtistYear = document.createElement('p')
+            const pPaintingName = document.createElement('p')
+            pPaintingName.textContent = foundArt.name
+            pArtistYear.textContent = `Created in ${foundArt.year} by ${foundArt.artist}`
+            li.appendChild(pArtistYear)
+            })
+
             li.appendChild(p)
     
             const img = document.createElement('img')
@@ -36,7 +47,7 @@ function renderArtArr(artArr) {
             li.addEventListener('mouseout', handleUnhover)
     
             function handleHover() {
-                li.style.border = 'solid 3px #90EE90'
+                li.style.border = 'solid 3px #37b1cc'
             }
     
             function handleUnhover() {
@@ -46,16 +57,16 @@ function renderArtArr(artArr) {
             ul.appendChild(li)
         })
 
-        const image = document.getElementById('.artwork-image');
-        // grab p, where painting title stored
+        // const image = document.getElementById('.artwork-image');
+        // // grab p, where painting title stored
 
-        image.addEventListener('click', function() {
-          const artist = data.artist; 
-          const year = data.year;
-          const style = data.style; 
+        // image.addEventListener('click', function() {
+        //   const artist = data.artist; 
+        //   const year = data.year;
+        //   const style = data.style; 
         
-          console.log(`Artist: ${artist}, Year: ${year}, Style: ${style}`);
-        });
+        //   console.log(`Artist: ${artist}, Year: ${year}, Style: ${style}`);
+        // });
      
 }
     
