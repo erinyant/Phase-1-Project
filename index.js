@@ -5,11 +5,6 @@ fetch("http://localhost:3000/artwork")
     renderArtArr(data);
   });
 
-// document.addEventListener("DOMContentLoaded", function() {
-// const element = document.querySelector("your-selector");
-//     // Rest of your code
-// })
-
 function renderArtArr(artArr) {
     
     const ul = document.querySelector('#artwork')
@@ -56,17 +51,5 @@ function renderArtArr(artArr) {
     
             ul.appendChild(li)
         })
-
-        // const image = document.getElementById('.artwork-image');
-        // // grab p, where painting title stored
-
-        // image.addEventListener('click', function() {
-        //   const artist = data.artist; 
-        //   const year = data.year;
-        //   const style = data.style; 
-        
-        //   console.log(`Artist: ${artist}, Year: ${year}, Style: ${style}`);
-        // });
-     
 }
     

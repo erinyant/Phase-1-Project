@@ -8,6 +8,7 @@ h1 {
     text-align: center;
     font-style: italic;
     font-family: Papyrus, sans-serif;
+    font-size: 36px
 }
 
 ul {
@@ -20,7 +21,8 @@ li {
 
 p {
     color: #FFD700;
-    font-family: Papyrus, sans-serif; 
+    font-family: Papyrus, sans-serif;
+    font-size: 20px 
 }
 
 img {
