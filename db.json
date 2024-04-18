@@ -1,0 +1,53 @@
+{
+    "artwork": [
+      {
+        "id": 1,
+        "name": "The Water Lily Pond",
+        "artist":"Claude Monet",
+        "year": "1899",
+        "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437127/796089/restricted",
+        "style": "Impressionism"
+      },
+      {
+        "id": 2,
+        "name": "Washington Crossing the Delaware",
+        "artist": "Emanuel Leutze",
+        "year": "1851",
+        "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11417/42494/main-image",
+        "style": "NA"
+      },
+      {
+        "id": 3,
+        "name": "Self-Portrait with a Straw Hat",
+        "artist": "Vincent Van Gogh",
+        "year": "1887",
+        "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image",
+        "style": "Post-Impressionism"
+      },
+      {
+        "id": 4,
+        "name": "The Death of Socrates",
+        "artist": "Jacques-Louis David",
+        "year": "1787",
+        "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436105/1692908/main-image",
+        "style": "Neoclassicism"
+      },
+      {
+        "id": 5,
+        "name": "Autumn Rhythm",
+        "artist": "Jackson Pollock",
+        "year": "1950",
+        "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488978/1012539/restricted",
+        "style": "Abstract Expressionist Painting"
+      },
+      {
+        "id": 6,
+        "name": "The Gulf Stream",
+        "artist": "Winslow Homer",
+        "year": "1899",
+        "image": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11122/2018691/main-image",
+        "style": "Realism"
+      }
+    ]
+  }
+  
