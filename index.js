@@ -1,9 +1,9 @@
 fetch("http://localhost:3000/artwork")
   .then((resp) => resp.json())
   .then((data) => {
-    console.log(data);
-    renderArtArr(data);
-  });
+    console.log(data)
+    renderArtArr(data)
+  })
 
 function renderArtArr(artArr) {
     
@@ -11,9 +11,6 @@ function renderArtArr(artArr) {
         
     artArr.forEach((artObj) => 
         {
-            console.log(artObj)
-            console.log(artObj.image)
-    
             const li = document.createElement('li')
     
             const p = document.createElement('p')
@@ -48,7 +45,7 @@ function renderArtArr(artArr) {
             function handleUnhover() {
                     li.style.border = 'none'
             }
-    
+            
             ul.appendChild(li)
         })
 }
